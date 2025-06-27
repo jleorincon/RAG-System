@@ -1,0 +1,41 @@
+{
+  "name": "rag-system",
+  "version": "1.0.0",
+  "description": "RAG System with Next.js, LangChain, and Supabase",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean",
+    "setup": "pnpm install && pnpm build",
+    "db:reset": "supabase db reset",
+    "db:migrate": "supabase db push",
+    "db:seed": "supabase db seed",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3",
+    "prettier": "^3.1.1",
+    "@types/node": "^20.11.16"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "keywords": ["RAG", "AI", "LangChain", "Next.js", "Supabase", "Vector Search"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rag-system.git"
+  },
+  "license": "MIT"
+} 
