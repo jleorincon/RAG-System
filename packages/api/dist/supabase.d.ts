@@ -1,5 +1,5 @@
-export declare const supabase: import("@supabase/supabase-js").SupabaseClient<any, "public", any> | null;
-export declare const supabaseAdmin: import("@supabase/supabase-js").SupabaseClient<any, "public", any> | null;
+export declare const supabase: any;
+export declare const supabaseAdmin: any;
 export interface Document {
     id: string;
     title: string;
@@ -34,13 +34,13 @@ export interface StructuredData {
 }
 export declare const dbOperations: {
     insertDocument(document: Omit<Document, "id" | "upload_date" | "updated_at">): Promise<any>;
-    insertDocumentChunks(chunks: Omit<DocumentChunk, "id" | "created_at">[]): Promise<any[]>;
-    getDocuments(): Promise<any[]>;
+    insertDocumentChunks(chunks: Omit<DocumentChunk, "id" | "created_at">[]): Promise<any>;
+    getDocuments(): Promise<any>;
     getDocumentWithChunks(documentId: string): Promise<any>;
     searchSimilarChunks(embedding: number[], limit?: number, threshold?: number): Promise<any>;
     deleteDocument(documentId: string): Promise<void>;
-    insertStructuredData(structuredData: Omit<StructuredData, "id" | "created_at">[]): Promise<any[]>;
-    getStructuredDataByDocument(documentId: string): Promise<any[]>;
+    insertStructuredData(structuredData: Omit<StructuredData, "id" | "created_at">[]): Promise<any>;
+    getStructuredDataByDocument(documentId: string): Promise<any>;
     searchSimilarStructuredData(embedding: number[], limit?: number, threshold?: number): Promise<any>;
 };
 //# sourceMappingURL=supabase.d.ts.map
