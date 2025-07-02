@@ -4,13 +4,13 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "outputDirectory": ".next",
   "functions": {
-    "app/api/**/*.js": {
+    "app/api/**/*": {
       "maxDuration": 30
     },
-    "app/api/admin/**/*.js": {
+    "app/api/admin/**/*": {
       "maxDuration": 60
     },
-    "app/api/upload/**/*.js": {
+    "app/api/upload/**/*": {
       "maxDuration": 60
     }
   },
